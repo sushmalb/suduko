@@ -1,0 +1,36 @@
+What are Streams?
+====================
+Streams are a feature introduced in Java 8 that provide a concise and expressive way to process collections of data.
+ A stream represents a sequence of elements that you can process in a declarative and functional style.
+ You can chain multiple intermediate and terminal operations together to form a stream pipeline.
+
+ Short-Circuiting Operations:
+ ==============================
+ Short-circuiting operations are a type of terminal operation that allows you to stop the processing of a stream once
+ a certain condition is met. Some short-circuiting operations include:
+
+ findFirst(): Returns the first element of the stream.
+ findAny(): Returns any element of the stream.
+ allMatch(Predicate), anyMatch(Predicate), noneMatch(Predicate): These operations can short-circuit the stream if the
+ result is determined before processing all the elements.
+
+ Method References:
+ ==================
+ Method references provide a concise way to refer to methods or constructors by name. They can be used as
+ arguments for functional interfaces, such as in stream operations. There are four types of method references:
+
+ Static method reference: ContainingClass::staticMethodName
+ Instance method reference: instanceReference::instanceMethodName
+ Constructor reference: ClassName::new
+ Arbitrary object method reference: ContainingType::methodName
+
+Stream Collectors:
+===================
+Collectors provide a convenient way to accumulate the elements of a stream into a collection or a single value.
+They are used in the collect terminal operation. Some common collectors include:
+
+toList(): Collects the elements into a List.
+toSet(): Collects the elements into a Set, removing duplicates.
+toMap(): Collects the elements into a Map based on specified key-value mappings.
+joining(): Concatenates the elements into a single String with optional delimiters.
+
