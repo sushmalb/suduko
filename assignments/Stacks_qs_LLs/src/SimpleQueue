@@ -1,0 +1,39 @@
+import java.util.LinkedList;
+
+   public  class SimpleQueue {
+
+        private LinkedList<Integer> queue;
+
+        public SimpleQueue() {
+            queue = new LinkedList<>();
+        }
+
+        public void enqueue(int val) {
+            queue.addLast(val);
+        }
+
+        public void dequeue() {
+            queue.removeFirst();
+        }
+
+        public void display() {
+            System.out.println("Queue:");
+            for (int i : queue) {
+                System.out.println(i);
+            }
+        }
+
+         public static void main(String[] args) {
+             SimpleQueue q  = new SimpleQueue();
+             q.enqueue(10);
+             q.enqueue(20);
+             q.display();
+         }
+
+    }
+
+
+
+
+
+
